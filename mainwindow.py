@@ -28,6 +28,14 @@ class MainWindow(QMainWindow):
 
         for particula in self.administrador:
             id_widget = QTableWidgetItem(particula.id)
+            origen_x_widget = QTableWidgetItem(particula.origen_x)
+            origen_y_widget = QTableWidgetItem(particula.origen_y)
+            destino_x_widget = QTableWidgetItem(particula.destino_x)
+            velocidad_widget = QTableWidgetItem(particula.velocidad)
+            red_widget = QTableWidgetItem(particula.red)
+            green_widget = QTableWidgetItem(particula.green)
+            blue_widget = QTableWidgetItem(particula.blue)
+            distancia_widget = QTableWidgetItem(particula.distancia)
 
     @Slot()
     def action_abrir_archivo(self):
