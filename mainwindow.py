@@ -16,6 +16,12 @@ class MainWindow(QMainWindow):
         self.ui.actionAbrir.triggered.connect(self.action_abrir_archivo)
         self.ui.actionGuardar.triggered.connect(self.action_guardar_archivo)
 
+        self.ui.mostrar_tabla_pushButton.clicked.connect(self.mostrar_tabla)
+    
+    @Slot()
+    def mostrar_tabla(self):
+        print('mostrar_tabla')
+
     @Slot()
     def action_abrir_archivo(self):
         ubicacion = QFileDialog.getOpenFileName(
