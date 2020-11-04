@@ -20,7 +20,9 @@ class MainWindow(QMainWindow):
     
     @Slot()
     def mostrar_tabla(self):
-        print('mostrar_tabla')
+        self.ui.tabla.setColumnCount(10)
+        headers = ["Id", "Origen_x", "Origen_y", "Destino_x", "Destino_y", "Velocidad", "Red", "Green", "Blue", "Distancia"]
+        self.ui.tabla.setHorizontalHeaderLabels(headers)
 
     @Slot()
     def action_abrir_archivo(self):
