@@ -24,6 +24,8 @@ class MainWindow(QMainWindow):
         headers = ["Id", "Origen_x", "Origen_y", "Destino_x", "Destino_y", "Velocidad", "Red", "Green", "Blue", "Distancia"]
         self.ui.tabla.setHorizontalHeaderLabels(headers)
 
+        self.ui.tabla.setRowCount(len(self.administrador))
+
     @Slot()
     def action_abrir_archivo(self):
         ubicacion = QFileDialog.getOpenFileName(
