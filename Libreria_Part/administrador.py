@@ -20,6 +20,10 @@ class Administrador:
             str(particula) + '\n' for particula in self.__particulas
         )
 
+    def __len__(self):
+        return len(self.__particulas)
+
+
     def guardar (self, ubicacion):
         try:
             with open(ubicacion, 'w') as archivo:
