@@ -1,4 +1,4 @@
-from PySide2.QtWidgets import QMainWindow, QFileDialog, QMessageBox
+from PySide2.QtWidgets import QMainWindow, QFileDialog, QMessageBox, QTableWidgetItem
 from PySide2.QtCore import Slot
 from ui_mainwindow import Ui_MainWindow
 from Libreria_Part.administrador import Administrador
@@ -25,6 +25,9 @@ class MainWindow(QMainWindow):
         self.ui.tabla.setHorizontalHeaderLabels(headers)
 
         self.ui.tabla.setRowCount(len(self.administrador))
+
+        for particula in self.administrador:
+            id_widget = QTableWidgetItem(particula.id)
 
     @Slot()
     def action_abrir_archivo(self):
