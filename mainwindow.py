@@ -17,6 +17,11 @@ class MainWindow(QMainWindow):
         self.ui.actionGuardar.triggered.connect(self.action_guardar_archivo)
 
         self.ui.mostrar_tabla_pushButton.clicked.connect(self.mostrar_tabla)
+        self.ui.buscar_pushButton.clicked.connect(self.buscar_id)
+
+    @Slot()
+    def buscar_id(self):
+        print('buscar')
     
     @Slot()
     def mostrar_tabla(self):
